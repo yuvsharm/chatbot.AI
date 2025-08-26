@@ -1,0 +1,193 @@
+/* ===== Base Dark Theme Styling ===== */
+#root {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #222831;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  color: #eeeeee;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  color: #c084fc; /* Lavender heading */
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  margin-bottom: 1rem;
+  box-sizing: border-box;
+}
+
+button,
+.suggested-btn {
+  background-color: #c084fc;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover:not(:disabled),
+.suggested-btn:hover {
+  background-color: #a855f7;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(192, 132, 252, 0.4);
+}
+
+button:disabled {
+  background-color: #555;
+  cursor: not-allowed;
+}
+
+p {
+  margin-top: 2rem;
+  font-size: 18px;
+  line-height: 1.5;
+  background-color: #393e46;
+  padding: 20px;
+  border-radius: 10px;
+  white-space: pre-wrap;
+  box-shadow: inset 0 0 8px #c084fc;
+}
+
+/* 👇👇 Answer Text Styling 👇👇 */
+.ai-answer {
+  text-align: left;
+}
+
+/* 👇👇 Rich Text Formatting for AI Answer 👇👇 */
+.ai-answer b {
+  color: #c084fc;
+  font-weight: 700;
+}
+
+.ai-answer i {
+  color: #eeeeee;
+  font-style: italic;
+}
+
+.ai-answer u {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.ai-answer .red {
+  color: #ff6b6b;
+  font-weight: 600;
+}
+
+.ai-answer .blue {
+  color: #c084fc;
+  font-weight: 600;
+}
+
+.ai-answer .green {
+  color: #32cd32;
+  font-weight: 600;
+}
+
+.ai-answer .emoji {
+  font-size: 1.3em;
+  margin: 0 3px;
+}
+
+/* 👇👇 Suggested Questions 👇👇 */
+.suggested-btn {
+  border-radius: 20px;
+  padding: 8px 15px;
+  margin: 5px 5px 15px 0;
+  font-size: 14px;
+}
+
+/* ===== Light Theme Styling ===== */
+body.light {
+  background-color: #f0f0f0;
+  color: #222;
+}
+
+body.light #root {
+  background: #ffffff;
+  color: #222;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+body.light h1 {
+  color: #a855f7;
+}
+
+body.light input[type="text"] {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #ccc;
+}
+
+body.light button,
+body.light .suggested-btn {
+  background-color: #c084fc;
+  color: white;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+body.light button:hover:not(:disabled),
+body.light .suggested-btn:hover {
+  background-color: #a855f7;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(168, 85, 247, 0.4);
+}
+
+body.light p {
+  background-color: #e0f7fa;
+  color: #222;
+  box-shadow: inset 0 0 6px #c084fc;
+}
+
+/* 👇👇 Light Theme Answer Styling 👇👇 */
+body.light .ai-answer b {
+  color: #a855f7;
+}
+
+body.light .ai-answer i {
+  color: #444;
+}
+
+body.light .ai-answer .red {
+  color: #d90429;
+}
+
+body.light .ai-answer .blue {
+  color: #a855f7;
+}
+
+body.light .ai-answer .green {
+  color: #2e7d32;
+}
+
+/* ✅ Background GIF/Image */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: url('https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExYWU2ajRpanF5dW0xeXEwdThzaGZkcmw2dmt0emo1NjJ3aG40cXI4aCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/cYf4OoUU4YZ0wIVWk3/giphy.webp') no-repeat center center fixed;
+  background-size: cover;
+  opacity: 0.6;
+  z-index: -1;
+}
+
+body.light::before {
+  opacity: 0.35;
+}
